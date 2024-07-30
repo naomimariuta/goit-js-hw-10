@@ -1,4 +1,4 @@
-import Notiflix from 'notiflix';
+import { Notify } from 'notiflix';
 import SlimSelect from 'slim-select';
 import 'slim-select/dist/slimselect.css';
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
@@ -51,7 +51,7 @@ function onFail() {
   selecter.classList.remove('is-hidden');
   loader.classList.replace('loader', 'is-hidden');
 
-  Notiflix.failure(
+  Notify.failure(
     'Oops! Something went wrong! Try reloading the page or select another cat breed!'
   );
 }
